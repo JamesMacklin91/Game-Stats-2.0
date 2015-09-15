@@ -1,0 +1,49 @@
+//Game Stats 2.0
+//Demonstrates arithmetic operations with variables
+//created by James Macklin
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	//unsigned ints can only store positive values, signed ints can handle both positive and negative values
+	unsigned int score = 5000;
+	cout << "score:" << score << endl;
+
+	//altering the value of a variable
+	score = score + 100;
+	cout << "score:" << score << endl;
+
+	//combined assignment operator
+	score += 100;
+	cout << "score:" << score << endl;
+
+	//increment operators
+	//lives++ and ++lives has the same net effect but in a more complex expression the results can be different
+	int lives = 3;
+	++lives;
+	cout << "lives:" << lives << endl;
+
+	lives = 3;
+	lives++;
+	cout << "lives:" << lives << endl;
+
+	//prefix operator increments the lives before working out the greater expression so it is 4*10
+	lives = 3;
+	int bonus = ++lives * 10;
+	cout << "lives, bonus = " << lives << "," << bonus << endl;
+
+	//postfix operator increments the lives after working out the greater expression so its 3*10
+	lives = 3;
+	bonus = lives++ * 10;
+	cout << "lives, bonus = " << lives << "," << bonus << endl;
+
+	//integer wrap around. when an int gets to the end of its limits it returns to 0
+	score = 4294967295;
+	cout << "\nscore:" << score << endl;
+	++score;
+	cout << "score:" << score << endl;
+
+	return 0;
+}
